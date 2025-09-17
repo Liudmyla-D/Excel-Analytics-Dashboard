@@ -68,6 +68,7 @@ YoY perspective: **Sales −4.3%**, **Units −15.7%**, **Discount −2.8 p.p.**
 
 ## Correlation Views
 Primary view: **Discount % (X)** vs **Margin % (or Gross Margin ₴, Y)** with bubble size = **Revenue ₴** — the expected inverse relationship (higher discount → lower margin).  
+
 Alternative: **Markup % (X)** vs **Gross Margin ₴ (Y)** — clear upward trend; largest bubbles in the top-right quadrant mark the highest-impact entities. *(See PDFs above; period filters are shown on the dashboard.)*
 
 ## ▶️ How to View

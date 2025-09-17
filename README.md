@@ -45,6 +45,12 @@ Show an end-to-end Excel analytics workflow: Power Query → Power Pivot/DAX →
 
 </details>
 
+</details>
+
+**[⬇️ Download Excel workbook](Project_Sibikovska.xlsx?raw=1)**
+
+
+
 ## Executive Summary
 Revenue totals **₴294.9M** with **~18.0M** units shipped. Average discount is **27.9%**, markup holds at **48.6%**, and gross margin reaches **₴96.5M**; Accounts Receivable averages **15 days**. The mix is dominated by **Powders (75%)** with **Supermarket** clients leading (**43%**). Priority: protect margin by tightening discount discipline while keeping AR near **15 days**. *[Source: Main KPIs]*
 

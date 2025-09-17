@@ -1,57 +1,75 @@
-# Excel Logistics & Sales Analytics — Portfolio (Project_Sibikovska)
+# Sales Analytics in Excel — My first portfolio
 
-**Файл:** `Project_Sibikovska.xlsx`  
-**Інфо‑панелі (аркуші):** `ОснПоказники`, `АналізПоказників`, `МЕНЕДЖЕРИ`, `КореляціяПоказн` (+ службові: `Параметри`, `Olap-cube`, ін.)
+**File:** `Project_Sibikovska.xlsx`  
+**Dashboards (sheet names):** Main KPIs (`ОснПоказники`), Trend Analysis (`АналізПоказників`), Managers (`МЕНЕДЖЕРИ`), Correlation (`КореляціяПоказн`)  
+*(service sheets: `Параметри`, `Olap-cube`, etc.)*
 
-## 🎯 Мета
-Показати мій власний підхід до побудови аналітики в Excel: Power Query → Power Pivot/DAX → 4 інформаційні панелі із слайсерами/таймлайном та бізнес‑висновками.
+## 🎯 Goal
+Show an end-to-end Excel analytics workflow: Power Query → Power Pivot/DAX → four interactive dashboards with slicers/timeline and business-ready insights.
 
-## 🧠 Контекст завдання (скорочено)
-- Дані зводяться на **місячному рівні** з уніфікацією довідників (клієнти, продукти, менеджери).  
-- План, дебіторка, зарплати та інші показники розкладаються до рівня *місяць–клієнт–продукт* пропорційно продажам.  
-- Інтерактивність за періодом, менеджером, брендом/категорією, клієнтом.
+## 🧠 Business/Model Context (short)
+- Monthly grain with unified dictionaries (clients, products, managers).  
+- Plan, AR (accounts receivable), payroll and other metrics are allocated down to **month–client–product** proportionally to sales.  
+- Interactivity by period, manager, brand/category, client.
 
-## 📂 Рекомендована структура репозиторію
+## 📂 Repository Structure (recommended)
 ```
 .
-├─ README.md                   # цей файл
-├─ Project_Sibikovska.xlsx     # мій Excel з розрахунками
-├─ docs/
+├─ README.md                   # this file
+├─ Project_Sibikovska.xlsx     # my Excel workbook
+├─ docs/                       # screenshots & optional PDF
 │  ├─ 01_main_kpis.png         # ОснПоказники
 │  ├─ 02_trend_changes.png     # АналізПоказників
 │  ├─ 03_managers.png          # МЕНЕДЖЕРИ
 │  └─ 04_correlation.png       # КореляціяПоказн
 └─ outputs/
-   └─ insights_example.csv     # (опційно) приклад інсайтів у табличному вигляді
+   └─ insights_example.csv     # optional tabular summary of insights
 ```
 
-## 🧩 Технічні деталі
-- **Інструменти:** Excel, Power Query (M), Power Pivot (DAX), PivotCharts, Slicers, Timeline.
-- **Модель:** календар (1‑ше число місяця), виміри (продукти, клієнти, менеджери), факти (продажі, план, дебіторка, зарплата).
-- **Приклади мір DAX:** 
-  - `Sales Amount`, `Sales Units`, `COGS`, `Gross Margin`, `Markup %`, `Discount %`, `AR (грн)` та `AR Days`, `Plan Execution %`, `YoY %`, `YoY p.p.`
-- **Прийоми:** уніфікація ключів у PQ; приведення типів на останньому кроці; масштабування `AR Days` для комбінованих графіків.
+## 🧩 Technical Details
+- **Tools:** Excel, Power Query (M), Power Pivot (DAX), PivotCharts, Slicers, Timeline.  
+- **Model:** calendar (first day of month), dimensions (Products, Clients, Managers), facts (Sales qty/amount, COGS, Price list, Plan, AR, Payroll).  
+- **Key measures (examples):** `Sales Amount`, `Sales Units`, `COGS`, `Gross Margin`, `Markup %`, `Discount %`, `AR (₴)`, `AR Days`, `Plan Execution %`, `YoY %`, `YoY p.p.`  
+- **Techniques:** key unification in PQ; set data types on the last PQ step; scale `AR Days` for combined charts when needed.
 
-## 🖼️ Панелі (що на скрінах)
-- **ОснПоказники** — KPI‑картки, комбінована діаграма (маржа/націнка/дебіторка‑дні), TOP‑5 (менеджери/продукти/клієнти).  
-- **АналізПоказників** — YoY/MoM зміни (% і п.п.), динаміка маржі/обороту.  
-- **МЕНЕДЖЕРИ** — оборот, маржа, оклад/бонуси; частка зарплат; TOP‑таблиці.  
-- **КореляціяПоказн** — «пузирькова» (X/Y/розмір за вибором, перегортання по кварталах/місяцях).
+## 🖼️ Dashboards
+- **Main KPIs** — KPI cards; combined chart (margin / markup / AR days); TOP-5 (managers/products/clients).  
+- **Trend Analysis** — YoY / MoM deltas (% and p.p.); margin/turnover dynamics.  
+- **Managers** — turnover, margin, payroll (base/bonus); payroll share in turnover; TOP tables.  
+- **Correlation** — bubble chart (configurable X/Y/size) with period paging.
 
-## ▶️ Як переглянути
-1. Відкрити `docs/*.png` (швидкий огляд) або сам файл `Project_Sibikovska.xlsx`.  
-2. На кожній панелі використати слайсери/таймлайн для фільтрації.
+## ▶️ How to View
+1. Open `docs/*.png` (quick glance) or download `Project_Sibikovska.xlsx`.  
+2. Use slicers/timeline on each dashboard.
 
-## 📈 Мої висновки (заповнити коротко 3–6 пунктів)
-- **Тренд:** Продажі YoY **X%**, маржа **Y грн**; націнка стабільна ~**Z%**.  
-- **Ризик:** Середня дебіторка **N днів** (ціль T днів) у сегменті **S**.  
-- **Фокус:** ТОП‑3 менеджери генерують **A%** обороту; **бренд B** має найвищий **Discount %**.  
-- **Дія:** пріоритезувати інкасацію клієнтів із 60+ днів; перегляд умов з **брендом B**; пілот зменшення дисконту.
+## Executive Summary
+Sales grew by **[YoY %]** YoY with a stable markup around **[Markup %]**. At the same time, Accounts Receivable average **[N]** days (vs target **[T]**), and the Top-3 managers generate **[A%]** of revenue. Priority: tighten collections on **60+** AR and A/B-test lower discounts on **[Brand/Category]** to protect margin.
 
-> У цей блок я вношу конкретні числа зі свого файлу/скрінів (узгоджені між собою).
+## Key Insights
+- **Growth & Profitability.** Year-over-year sales are **[YoY %]**, gross margin totals **[Gross Margin, ₴]**, and markup holds near **[Markup %]**. Main driver: **[Top brand/category or customer segment]**.  
+  **Action:** Scale the winning assortment/channel and codify targets in monthly KPIs.
 
-## ⚠️ Обмеження
-- Вихідні дані не публікую; для портфоліо показую результат/логіку (скріни, опис мір, структура).
+- **Discounting & Pricing.** Average discount is **[Discount %]**; **[Brand/Category]** runs higher at **[Brand Discount %]**, compressing margin by **[Δ p.p.]** vs median.  
+  **Action:** A/B-test a lower promo depth for **[Brand/Category]** and set guardrails for discounting.
+
+- **Accounts Receivable.** Average AR is **[N]** days (target **[T]**); **[Share %]** of receivables are **60+ days**, concentrated in **[Client segment]**.  
+  **Action:** Prioritize the 60+ bucket (sequenced reminders / payment plans), tighten terms for repeat late-payers.
+
+- **Manager Performance.** Top-3 managers contribute **[A%]** of revenue with **[X%]** higher margin vs median; bottom quartile trails by **[Gap %]**.  
+  **Action:** Replicate Top-3 playbook (mix, pricing, client portfolio); targeted coaching for the bottom quartile.
+
+- **Product Mix.** **[Category/SKU group]** delivers **[Share %]** of margin at markup **[Markup %]**; the long tail adds **[Share %]** with low velocity.  
+  **Action:** Rebalance assortment; de-stock slow movers; shift budget to high-margin/velocity items.
+
+- **Plan Execution.** Plan attainment is **[Plan %]** with YoY delta **[Δ p.p.]** mainly driven by **[driver: price/mix/volume]**.  
+  **Action:** Monthly review cadence with corrective actions on price/mix/volume.
+
+## Risks & Next Steps
+- **Risks:** Margin sensitivity to discounting on **[Brand/Category]**; aging receivables in **[Segment]**.  
+- **Next Steps:** (1) Collections sprint for **60+** AR; (2) Discount A/B on **[Brand/Category]**; (3) Quarterly assortment review.
+
+## ⚠️ Limitations
+Data are not published; the repository demonstrates the approach and results (screens/PDF).
 
 ---
-Автор: **Lyudmila Sibikovska** · Ліцензія: MIT · Оновлено: 2025-09-17
+Author: **Lyudmila Sibikovska** · License: MIT

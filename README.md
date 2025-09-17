@@ -1,4 +1,4 @@
-# Sales Analytics in Excel — My first portfolio
+# Sales Analytics in Excel — Portfolio Project
 
 **File:** `Project_Sibikovska.xlsx`  
 **Dashboards (sheet names):** Main KPIs (`ОснПоказники`), Trend Analysis (`АналізПоказників`), Managers (`МЕНЕДЖЕРИ`), Correlation (`КореляціяПоказн`)  
@@ -16,17 +16,17 @@ Show an end-to-end Excel analytics workflow: Power Query → Power Pivot/DAX →
 
 ```
 .
-├─ README.md                   # this file
-├─ Project_Sibikovska.xlsx     # my Excel workbook
-├─ docs/                       # screenshots & optional PDF
-│  ├─ 01_main_kpis.png         # ОснПоказники
-│  ├─ 02_trend_changes.png     # АналізПоказників
-│  ├─ 03_managers.png          # МЕНЕДЖЕРИ
-│  └─ 04_correlation.png       # КореляціяПоказн
+├─ README.md
+├─ Project_Sibikovska.xlsx
+├─ docs/                     # PDF exports of dashboards
+│  ├─ 01_main_kpis.pdf
+│  ├─ 02_trend_changes.pdf
+│  ├─ 03_managers.pdf
+│  ├─ 04_correlation_2.pdf   # Discount % vs Margin % (primary)
+│  └─ 04_correlation_1.pdf   # Markup % vs Gross Margin ₴ (alt.)
 └─ outputs/
-└─ insights_example.csv     # optional tabular summary of insights
+   └─ insights_example.csv   # optional tabular summary of insights
 ```
-
 
 ## 🧩 Technical Details
 - **Tools:** Excel, Power Query (M), Power Pivot (DAX), PivotCharts, Slicers, Timeline.  
@@ -34,16 +34,21 @@ Show an end-to-end Excel analytics workflow: Power Query → Power Pivot/DAX →
 - **Key measures (examples):** `Sales Amount`, `Sales Units`, `COGS`, `Gross Margin`, `Markup %`, `Discount %`, `AR (₴)`, `AR Days`, `Plan Execution %`, `YoY %`, `YoY p.p.`  
 - **Techniques:** key unification in PQ; set data types at the final PQ step; scale `AR Days` for combined charts when needed.
 
-## 🖼️ Dashboards (previews)
-[![Main KPIs](docs/01_main_kpis.png)](docs/01_main_kpis.png)  
-[![Trend & Changes](docs/02_trend_changes.png)](docs/02_trend_changes.png)  
-[![Managers](docs/03_managers.png)](docs/03_managers.png)  
-[![Correlation](docs/04_correlation_2.png)](docs/04_correlation_2.png)
+<details>
+  <summary>📷 Dashboards (open as PDF)</summary>
+
+- [Main KPIs](docs/01_main_kpis.pdf)  
+- [Trend & Changes](docs/02_trend_changes.pdf)  
+- [Managers](docs/03_managers.pdf)  
+- [Correlation — Discount % vs Margin %](docs/04_correlation_2.pdf)  
+  - [Alternative: Markup % vs Gross Margin ₴](docs/04_correlation_1.pdf)
+
+</details>
 
 ## Executive Summary
-Revenue totals **₴294.9M** with **~18.0M** units shipped. Average discount is **27.9%**, markup holds at **48.6%**, and gross margin reaches **₴96.5M**; Accounts Receivable averages **15 days**. The mix is dominated by **Powders (75%)** with **Supermarket** clients leading (**43%**). Priority: protect margin by tightening discount discipline while keeping AR near **15 days**. [Source: Main KPIs]  
+Revenue totals **₴294.9M** with **~18.0M** units shipped. Average discount is **27.9%**, markup holds at **48.6%**, and gross margin reaches **₴96.5M**; Accounts Receivable averages **15 days**. The mix is dominated by **Powders (75%)** with **Supermarket** clients leading (**43%**). Priority: protect margin by tightening discount discipline while keeping AR near **15 days**. *[Source: Main KPIs]*
 
-YoY perspective: **Sales −4.3%**, **Units −15.7%**, **Discount −2.8 p.p.**, **Markup +9.3 p.p.**, **Gross Margin +8.7%**, **AR Days −56.3%**. Focus: sustain markup improvements while addressing volume softness. [Source: Trend Analysis]
+YoY perspective: **Sales −4.3%**, **Units −15.7%**, **Discount −2.8 p.p.**, **Markup +9.3 p.p.**, **Gross Margin +8.7%**, **AR Days −56.3%**. Focus: sustain markup improvements while addressing volume softness. *[Source: Trend Analysis]*
 
 ## Key Insights
 - **Pricing & Profitability.** Markup **48.6%** with gross margin **₴96.5M** indicates healthy unit economics; however, the average **27.9%** discount leaves room to optimize promo depth.  
@@ -58,27 +63,19 @@ YoY perspective: **Sales −4.3%**, **Units −15.7%**, **Discount −2.8 p.p.**
 - **Manager Performance & Payroll.** Plan attainment ~**100%** across periods; payroll split ≈ **Base 58% / Turnover bonus 24% / Low-AR bonus 18%**.  
   *Action:* Replicate Top-manager playbooks (mix, pricing, client portfolio); keep payroll share near **~1.2–1.4%** of revenue.
 
-- **Mix & Segments.** **Powders 75%** of product mix; **Supermarket 43%** of client mix (then Mixed **27%**, Market **14%**, Perfume **6%**, Opt **8%**, Pharmacy **2%**).  
+- **Mix & Segments.** **Powders 75%** of product mix; **Supermarket 43%** of client mix (then Mixed **27%**, Market **14%**, Perfume **6%**, Wholesale (Opt) **8%**, Pharmacy **2%**).  
   *Action:* Scale winning assortment in Supermarkets; pilot uplift in under-penetrated channels (Pharmacy/Perfume).
 
 ## Correlation Views
-
-- [Correlation — Discount % vs Margin % (PDF)](docs/04_correlation_2.pdf)  
-- [Alternative — Markup % vs Gross Margin ₴ (PDF)](docs/04_correlation_1.pdf)
-
-- **Markup % (X)** vs **Gross Margin ₴ (Y)**; bubble size = **Revenue ₴**; period **2016-Q1** — clear upward relationship; largest bubbles in the top-right quadrant mark high-impact entities.  
-- **Alternative:** **Discount % (X)** vs **Margin % (or Gross Margin ₴, Y)**; bubble size = **Revenue ₴** — shows the expected inverse relationship (higher discount → lower margin).  
-_These views are included for portfolio clarity; period filters are shown on the dashboard._
+Primary view: **Discount % (X)** vs **Margin % (or Gross Margin ₴, Y)** with bubble size = **Revenue ₴** — the expected inverse relationship (higher discount → lower margin).  
+Alternative: **Markup % (X)** vs **Gross Margin ₴ (Y)** — clear upward trend; largest bubbles in the top-right quadrant mark the highest-impact entities. *(See PDFs above; period filters are shown on the dashboard.)*
 
 ## ▶️ How to View
-1. Open `docs/*.png` (quick glance) or download `Project_Sibikovska.xlsx`.  
+1. Open `docs/*.pdf` (quick glance) or download `Project_Sibikovska.xlsx`.  
 2. Use slicers/timeline on each dashboard to reproduce the views shown here.
 
 ## ⚠️ Limitations
 Data are not published; this repo demonstrates the approach and outcomes (screens/PDF).
-
----
-Author: **Lyudmila Sibikovska** · License: MIT
 
 ---
 Author: **Lyudmila Sibikovska** · License: MIT
